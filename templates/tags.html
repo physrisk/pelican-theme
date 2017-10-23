@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{# borrowed from plumage theme #}
+{# https://github.com/kdeldycke/plumage #}
+
+{% block head_title %}
+    All tags
+{% endblock %}
+
+{% block body_title %}
+    <h1>Tags</h1>
+{% endblock %}
+
+{% block body_extra_class %} tags-page {% endblock %}
+
+{% block body_content %}
+    <p>
+    {% set all_tags = [] %}
+    {% for tag, articles in tags %}
+        {% if all_tags.append({'name': tag.name, 'url': tag.url, 'articles': articles|length()}) %}{% endif %}
+    {% endfor %}
+    {% set total_tags = all_tags|sum(attribute = 'articles') %}
+    {% for tag in all_tags|sort(reverse = True, attribute = 'articles') %}
+        {{ m.render_tag(tag) }}
+    {% endfor %}
+    </p>
+{% endblock %}

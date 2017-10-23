@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{# borrowed from plumage theme #}
+{# https://github.com/kdeldycke/plumage #}
+
+{% block head_title %}
+    Authors
+{% endblock %}
+
+{% block body_title %}
+    <h1>Authors</h1>
+{% endblock %}
+
+{% block body_content %}
+
+    {% set all_authors = [] %}
+    {% for author, articles in authors %}
+        {% if all_authors.append({'name': author.name, 'url': author.url, 'articles': articles|length()}) %}{% endif %}
+    {% endfor %}
+
+    <dl class="dl-horizontal">
+        {% for author in all_authors|sort(reverse = True, attribute = 'articles') %}
+            <dt><a href="{{ SITEURL }}/{{ author.url }}" class="label label-info">{{ author.name }}</a></dt>
+            <dd><a href="{{ SITEURL }}/{{ author.url }}">{{ author.articles }} article{{ 's' if author.articles > 1 else '' }}</a></dd>
+        {% endfor %}
+    </dl>
+
+{% endblock %}

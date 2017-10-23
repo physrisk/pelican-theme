@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{# borrowed from plumage theme #}
+{# https://github.com/kdeldycke/plumage #}
+
+{% block head_title %}
+    "#{{ tag }}" archive
+{% endblock %}
+
+{% block body_title %}
+    <h1>#{{ tag }} archive</h1>
+{% endblock %}
+
+{% block body_content %}
+    <dl class="dl-horizontal">
+        {% for article in articles %}
+            <dt><abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></dt>
+            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+        {% endfor %}
+    </dl>
+{% endblock %}

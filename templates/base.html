@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+{% import 'macros.html' as m %}
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    {# essentials #}
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block head_title %}Home{% endblock head_title %} &ndash; {{ SITENAME }}</title>
+        <meta name="author" content="{{ AUTHOR|e }}"/>
+    {# =essentials #}
+
+    {# bootstrap #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    {# =bootstrap #}
+
+    {# css #}
+        <link rel="stylesheet" href="/theme/css/style{% if not DEVELOP %}.min{% endif%}.css">
+        {% block extra_css %}{% endblock extra_css %}
+    {# =css #}
+
+    {# favicon #}
+        <link rel="apple-touch-icon" sizes="180x180" href="/theme/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/theme/favicon/theme/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/theme/favicon/theme/favicon-16x16.png">
+        <link rel="manifest" href="/theme/favicon/manifest.json">
+        <link rel="mask-icon" href="/theme/favicon/safari-pinned-tab.svg" color="#222222">
+        <link rel="shortcut icon" href="/theme/favicon/favicon.ico">
+        <meta name="msapplication-config" content="/theme/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#222222">
+    {# =favicon #}
+
+    {# fonts #}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:b|Noto+Serif">
+    {# =fonts #}
+
+    {# feeds #}
+        {% set all_feeds = [] %}
+        {% if FEED_ALL_ATOM %}
+            {% if all_feeds.append({'kind': 'Atom', 'url': FEED_ALL_ATOM, 'name': 'All posts'}) %}{% endif %}
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+            {% if all_feeds.append({'kind': 'RSS', 'url': FEED_ALL_RSS, 'name': 'All posts'}) %}{% endif %}
+        {% endif %}
+        {% if FEED_ATOM %}
+            {% if all_feeds.append({'kind': 'Atom', 'url': FEED_ATOM, 'name': 'Latest posts'}) %}{% endif %}
+        {% endif %}
+        {% if FEED_RSS %}
+            {% if all_feeds.append({'kind': 'RSS', 'url': FEED_RSS, 'name': 'Latest posts'}) %}{% endif %}
+        {% endif %}
+        {% if CATEGORY_FEED_ATOM and category is defined %}
+            {% if all_feeds.append({'kind': 'Atom', 'url': CATEGORY_FEED_ATOM|format(category.slug), 'name': 'Category: ' + category.name}) %}{% endif %}
+        {% endif %}
+        {% if CATEGORY_FEED_RSS and category is defined %}
+            {% if all_feeds.append({'kind': 'RSS', 'url': CATEGORY_FEED_RSS|format(category.slug), 'name': 'Category: ' + category.name}) %}{% endif %}
+        {% endif %}
+        {% if TAG_FEED_ATOM and tag is defined %}
+            {% if all_feeds.append({'kind': 'Atom', 'url': TAG_FEED_ATOM|format(tag.slug), 'name': 'Tag: ' + tag.name}) %}{% endif %}
+        {% endif %}
+        {% if TAG_FEED_RSS and tag is defined %}
+            {% if all_feeds.append({'kind': 'RSS', 'url': TAG_FEED_RSS|format(tag.slug), 'name': 'Tag: ' + tag.name}) %}{% endif %}
+        {% endif %}
+        {% for feed in all_feeds %}
+            <link href="{{ FEED_DOMAIN }}/{{ feed.url }}" type="application/{{ feed.kind|lower }}+xml" rel="alternate" title="{{ SITENAME|e }} - {{ feed.name|e }} - {{ feed.kind }} Feed"/>
+        {% endfor %}
+    {# =feeds #}
+
+    {# seo #}
+        {% if article and article.summary %}
+            <meta name="description" content="{{ article.summary|striptags }}"/>
+        {% elif page and page.summary %}
+            <meta name="description" content="{{ page.summary|striptags }}"/>
+        {% else %}
+            <meta name="description" content="{{ SITE_SUMMARY }}"/>
+        {% endif%}
+        <meta property="og:site_name" content="{{ SITENAME }}" />
+        <meta property="og:type" content="article" />
+        {% if article and article.title %}    
+            <meta property="og:title" content="{{ article.title }} -- {{ SITENAME }}" />
+            <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+        {% elif page and page.title %}    
+            <meta property="og:title" content="{{ page.title }} -- {{ SITENAME }}" />
+            <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+        {% endif%}
+        {% if article and article.image_url %}
+            <meta property="og:image" content="{{ SITEURL }}/{{ article.image_url}}" />
+        {% elif page and page.image_url %}
+            <meta property="og:image" content="{{ SITEURL }}/{{ page.image_url}}" />
+        {% else %}
+            <meta property="og:image" content="{{ SITE_LOGO_URL }}" />
+        {% endif%}
+        {% if article and article.summary %}
+            <meta property="og:description" content="{{ article.summary|striptags }}" />
+        {% elif page and page.summary %}
+            <meta property="og:description" content="{{ page.summary|striptags }}" />
+        {% else %}
+            <meta name="og:description" content="{{ SITE_SUMMARY }}"/>
+        {% endif%}
+    {# =seo #}
+
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+    {# navbar #}
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                {# hamburger #}
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ SITEURL }}"><img src="{{ SITE_LOGO_URL }}" alt="{{ SITENAME }}"/> {{ SITENAME }}</a>
+                    </div>
+                {# =hamburger #}
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    {# menu #}
+                        <ul class="nav navbar-nav">
+                            {% for p in pages %}
+                                {% set active_page = (p == page) -%}
+                                <li {% if active_page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}{% if active_page %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+                            {% endfor %}
+                            {% for title, link in MENU_ITEMS %}
+                                {% set active_page = link == ("/%s"|format(output_file)).strip('index.html') -%}
+                                <li {% if active_page %} class="active" {% endif %}><a href="{{ link }}">{{ title }}{% if active_page %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {# =menu #}
+
+                    {# search #}
+                        {% if TIPUE_SEARCH %}
+                            <form class="navbar-form navbar-right" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" id="tipue_search_input" name="q" class="form-control search-query" placeholder="Search" required />
+                                        <span class="input-group-btn"><button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
+                                    </div>
+                                </div>
+                            </form>
+                        {% endif %}
+                    {# =search #}
+                </div>
+            </div>
+        </nav>
+    {# =navbar #}
+
+    {# main #}
+        <div class="container">
+            <div class="row">
+                <div class="main col-md-9">
+                    <div class="panel panel-default">
+                        {% if not skip_title %}
+                            <div class="panel-heading">
+                                {% block body_title %}
+                                {% endblock %}
+                            </div>
+                        {% endif %}
+                        <div class="panel-body {% block body_extra_class %}{% endblock %}">
+                            {% block body_content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar col-md-3">
+                    {% block body_sidebar %}
+                    {% endblock %}
+                    <div id="js-load-sidebar"></div>
+                </div>
+            </div>
+        </div>
+    {# =main #}
+    
+    {# footer #}
+        <footer class="footer navbar-inverse container-fluid">
+            {# license #}
+                <div class="license-info container">
+                    {{ m.license(SITENAME,SITEURL,LICENSE) }}
+                </div>
+            {# =license #}
+        </footer>
+
+        {# analytics #}
+            {% if GOOGLE_ANALYTICS %}
+                <script type="text/javascript">
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                    ga('create', '{{GOOGLE_ANALYTICS}}', '{{GA_COOKIE_DOMAIN if GA_COOKIE_DOMAIN else 'auto'}}');
+                    ga('send', 'pageview');
+                </script>
+            {% endif %}
+        {# =analytics #}
+
+        {# javascript #}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="{{ SITEURL }}/theme/js/application{% if not DEVELOP %}.min{% endif%}.js"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML'></script>
+            <script type="text/x-mathjax-config">
+			    MathJax.Hub.Config({
+				    TeX:{equationNumbers:{autoNumber:"AMS"}}
+    			});
+            </script>
+            {% block extra_js %}{% endblock %}
+        {# =javascript #}
+
+    {# =footer #}
+</body>
+</html>
