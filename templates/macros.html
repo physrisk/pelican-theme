@@ -80,17 +80,8 @@
     {% elif protocol.startswith('http') %}
         {% set domain = link.split('%s://' % protocol, 1)[1].split('/', 1)[0] %}
         {% set SITE_ICONS = {
-                    'apple': ['apple.com']
-                , 'github': ['github.com']
-                , 'twitter': ['twitter.com']
-                , 'youtube': ['youtube.com']
-                , 'dropbox': ['dropbox.com']
-                , 'facebook-square': ['facebook.com']
-                , 'file-text': ['docs.google.com']
-                , 'bitbucket': ['bitbucket.org', 'bitbucket.com']
-                , 'linkedin-square': ['linkedin.com']
-                , 'stack-overflow': ['stackoverflow.com']
-                , 'stack-exchange': ['stackexchange.com']
+                    'education': ['www.vu.lt','www.ff.vu.lt','www.tfai.vu.lt']
+                  , 'thumbs-up': ['facebook.com', 'www.facebook.com']
                 }
         %}
         {% for (site_icon, site_domains) in SITE_ICONS.items() %}
@@ -100,14 +91,14 @@
                 {% endif %}
             {% endfor %}
         {% endfor %}
+    {% elif link.startswith('/feeds/') %}
+        {% if icon.append('bell') %}{% endif %}
     {% endif %}
     <a href="{{ link }}">
         {% if icon %}
-            <i class="fa {{ 'fa-%s' % icon[0] }}"></i>
-        {% elif domain and favicon %}
-            <img src="https://icons.better-idea.org/icon?url={{ domain }}&size=16" width="16" height="16" class="icon" alt="{{ domain }} icon"/>
+            <i class="glyphicon {{ 'glyphicon-%s' % icon[0] }}"></i>
         {% else %}
-            <i class="fa fa-external-link"></i>
+            <span class="glyphicon glyphicon-link"></span>
         {% endif %}
         {{ label }}
     </a>
