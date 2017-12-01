@@ -82,6 +82,7 @@
         {% set SITE_ICONS = {
                     'education': ['www.vu.lt','www.ff.vu.lt','www.tfai.vu.lt']
                   , 'thumbs-up': ['facebook.com', 'www.facebook.com']
+                  , 'user': ['gontis.eu', 'kononovicius.lt', 'www.itpa.lt', 'web.vu.lt']
                 }
         %}
         {% for (site_icon, site_domains) in SITE_ICONS.items() %}
@@ -107,7 +108,7 @@
 {% macro render_link_widget(SOCIAL, LINKS, FAVICON_LINKS) %}
     {% if SOCIAL or LINKS %}
         <div class="sidebar-widget links-widget panel panel-default">
-            <div class="panel-heading">Links</div>
+            <div class="panel-heading">External Links</div>
             <div class="panel-body">
                 <ul class="list-unstyled">
                 {% for g_links in (SOCIAL, LINKS) %}
