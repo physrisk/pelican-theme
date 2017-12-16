@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block head_title %}
     Articles by {{ author.name }}
@@ -6,4 +6,13 @@
 
 {% block body_title %}
     <h1>Articles by {{ author.name }}</h1>
+{% endblock %}
+
+{% block body_content %}
+    <dl class="dl-horizontal">
+        {% for article in articles %}
+            <dt><abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></dt>
+            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+        {% endfor %}
+    </dl>
 {% endblock %}
