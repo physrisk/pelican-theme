@@ -132,7 +132,8 @@ h1,h2,h3,h4,h5,h6,
 .main .html5-embed-iframe{
     margin:10px auto;
 }
-.main .panel-heading h1 {
+.main .panel-heading h1,
+.main article header h1 {
     margin:0;
 }
 .main header h2 {
