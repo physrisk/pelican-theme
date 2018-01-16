@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-    {{ article.title|striptags }}
+    {{ article.title|striptags|e }}
 {% endblock %}
 
 

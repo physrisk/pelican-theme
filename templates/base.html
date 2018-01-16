@@ -67,9 +67,9 @@
 
     {# seo #}
         {% if article and article.summary %}
-            <meta name="description" content="{{ article.summary|striptags }}"/>
+            <meta name="description" content="{{ article.summary|striptags|e }}"/>
         {% elif page and page.summary %}
-            <meta name="description" content="{{ page.summary|striptags }}"/>
+            <meta name="description" content="{{ page.summary|striptags|e }}"/>
         {% else %}
             <meta name="description" content="{{ SITE_SUMMARY }}"/>
         {% endif%}
@@ -90,9 +90,9 @@
             <meta property="og:image" content="{{ SITE_LOGO_URL }}" />
         {% endif%}
         {% if article and article.summary %}
-            <meta property="og:description" content="{{ article.summary|striptags }}" />
+            <meta property="og:description" content="{{ article.summary|striptags|e }}" />
         {% elif page and page.summary %}
-            <meta property="og:description" content="{{ page.summary|striptags }}" />
+            <meta property="og:description" content="{{ page.summary|striptags|e }}" />
         {% else %}
             <meta name="og:description" content="{{ SITE_SUMMARY }}"/>
         {% endif%}
