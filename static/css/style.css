@@ -7,10 +7,10 @@ body {
     font-family: Noto Serif, serif;
 }
 a {
-    color:#96a;
+    color:#55a;
 }
 a:hover {
-    color:#647;
+    color:#337;
 }
 iframe {
     border:0px;
@@ -19,20 +19,20 @@ iframe {
     overflow:hidden;
 }
 .btn-primary {
-    background:#96a;
-    border-color:#96a;
+    background:#55a;
+    border-color:#55a;
 }
 .continue-reading {
     font-weight:bold;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus,
 .btn-primary:active, .btn-primary.active {
-    background:#647;
-    border-color:#445;
+    background:#337;
+    border-color:#337;
 }
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
-    background:#647;
-    border-color:#445;
+    background:#337;
+    border-color:#337;
 }
 h1,h2,h3,h4,h5,h6, 
 .navbar, .footer {
@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .navbar-inverse {
     background:#222;
-    color:#9d9d9d;
+    color:#999;
 }
 .navbar-brand {
     padding:9px 15px 11px 15px;
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .navbar-inverse .navbar-nav li a:hover,
 .navbar-inverse a.navbar-brand:hover {
-    background-color: #647;
+    background-color: #337;
 }
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
@@ -148,26 +148,24 @@ h1,h2,h3,h4,h5,h6,
     margin:10px auto;
 }
 .main .panel-heading h1,
-.main article header h1 {
+.main article h1 {
     margin:0;
 }
-.main header h2 {
+.main h2 {
     margin:5px 0;
 }
 .main .post-meta {
+    color: #999;
     margin: 5px 0 5px 0;
     line-height:25px;
 }
-.main header .post-meta {
-    color: #9d9d9d;
-}
-.main header .post-meta .label-default,
+.main .post-meta .label-default,
 .sidebar .hashtag-widget .label-default {
-    background-color: #9d9d9d;
+    background-color: #999;
 }
-.main header .post-meta .label-default:hover,
+.main .post-meta .label-default:hover,
 .sidebar .hashtag-widget .label-default:hover {
-    background-color: #647;
+    background-color: #222;
 }
 .sidebar .hashtag-widget .more-tags {
     margin-top:10px;
@@ -180,6 +178,9 @@ h1,h2,h3,h4,h5,h6,
 }
 .footer .license-info img {
     vertical-align:middle;
+}
+.footer a:hover {
+    color:#77d;
 }
 
 @media (max-width: 991px) {
@@ -200,7 +201,7 @@ nav #tipue_search_input {
     line-height:20px !important;
     background-image:none !important;
     background: #fff !important;
-    color:#555555 !important;
+    color:#222 !important;
     padding:6px 12px !important;
     width:auto !important;
     border:1px solid #cccccc !important;
