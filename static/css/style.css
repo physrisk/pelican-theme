@@ -7,10 +7,10 @@ body {
     font-family: Noto Serif, serif;
 }
 a {
-    color:#55a;
+    color:#77a;
 }
 a:hover {
-    color:#337;
+    color:#557;
 }
 iframe {
     border:0px;
@@ -19,20 +19,21 @@ iframe {
     overflow:hidden;
 }
 .btn-primary {
-    background:#55a;
-    border-color:#55a;
+    background:transparent;
+    border-color:#77a;
+    color:#77a;
 }
-.continue-reading {
+.continue-reading, .more-tags {
     font-weight:bold;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus,
 .btn-primary:active, .btn-primary.active {
-    background:#337;
-    border-color:#337;
+    background:#557;
+    border-color:#557;
 }
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
-    background:#337;
-    border-color:#337;
+    background:#557;
+    border-color:#557;
 }
 h1,h2,h3,h4,h5,h6, 
 .navbar, .footer {
@@ -55,7 +56,10 @@ h1,h2,h3,h4,h5,h6,
 }
 .navbar-inverse .navbar-nav li a:hover,
 .navbar-inverse a.navbar-brand:hover {
-    background-color: #337;
+    background-color: #557;
+}
+.sidebar .sidebar-widget .panel-heading {
+    font-weight:bold;
 }
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
@@ -70,6 +74,9 @@ h1,h2,h3,h4,h5,h6,
 }
 .main {
     z-index:999;
+}
+.main header {
+    margin-bottom:10px;
 }
 .main p {
     text-align:justify;
@@ -148,7 +155,7 @@ h1,h2,h3,h4,h5,h6,
     margin:10px auto;
 }
 .main .panel-heading h1,
-.main article h1 {
+.main header h1 {
     margin:0;
 }
 .main h2 {
@@ -161,11 +168,11 @@ h1,h2,h3,h4,h5,h6,
 }
 .main .post-meta .label-default,
 .sidebar .hashtag-widget .label-default {
-    background-color: #999;
+    background-color: #77a;
 }
 .main .post-meta .label-default:hover,
 .sidebar .hashtag-widget .label-default:hover {
-    background-color: #222;
+    background-color: #557;
 }
 .sidebar .hashtag-widget .more-tags {
     margin-top:10px;
