@@ -126,7 +126,7 @@
 
 {% macro render_hashtag_widget(tags,SITE_URL,WIDGET_MAX_TAGS) %}
     <div class="sidebar-widget hashtag-widget panel panel-default">
-        <div class="panel-heading">Hashtags</div>
+        <div class="panel-heading">Top hashtags</div>
         <div class="panel-body">
             {% set widget_tags = [] %}
             {% for tag, articles in tags %}
@@ -137,7 +137,7 @@
             {% for tag in wtags[:WIDGET_MAX_TAGS] %}
                 {{ render_tag(tag) }}
             {% endfor %}
-             <div><a class="more-tags btn btn-primary" href="{{ SITEURL }}/tags.html">More hashtags</a></div>
+             <div><a class="more-tags btn btn-primary" href="{{ SITEURL }}/tags.html">All hashtags...</a></div>
         </div>
     </div>
 {% endmacro %}
