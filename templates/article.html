@@ -4,15 +4,17 @@
     {{ article.title|striptags|e }}
 {% endblock %}
 
-
+{% set skip_title = true %}
 {% block body_title %}
-    <h1>{{ article.title }}</h1>
-    <div class="post-meta">
-        {{ m.render_meta(article,tags,AUTHOR) }}
-    </div>
 {% endblock %}
 
 {% block body_content %}
+    <header>
+        <h1>{{ article.title }}</h1>
+        <div class="post-meta">
+            {{ m.render_meta(article,tags,AUTHOR) }}
+        </div>
+    </header>
     {{ article.content }}
 
     {% if article.related_posts %}
