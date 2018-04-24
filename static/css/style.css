@@ -133,15 +133,6 @@ h1,h2,h3,h4,h5,h6,
 .main ul.article-references {
 	list-style-type: decimal;
 }
-.main ul.article-references .title {
-	font-style: italic;
-}
-.main ul.article-references .number{
-	font-weight: bold;
-}
-.main ul.article-references .volume {
-	font-weight: bold;
-}
 .main .html5-embed {
     margin:10px 0;
 }
