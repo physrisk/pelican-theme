@@ -64,6 +64,9 @@ h1,h2,h3,h4,h5,h6,
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
 }
+.sidebar .sidebar-widget ul {
+    margin: 0;
+}
 .sidebar .info-widget img {
     max-width: 200px;
     margin:0 auto 10px auto;

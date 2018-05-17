@@ -107,13 +107,17 @@
     </a>
 {%- endmacro %}
 
-{% macro render_link_widget(SOCIAL, LINKS, FAVICON_LINKS) %}
-    {% if SOCIAL or LINKS %}
+{% macro render_link_widget(LINKS, IS_SITE_LINKS, FAVICON_LINKS) %}
+    {% if LINKS %}
         <div class="sidebar-widget links-widget panel panel-default">
+            {% if IS_SITE_LINKS %}
+            <div class="panel-heading">Physics of Risk Links</div>
+            {% else %}
             <div class="panel-heading">External Links</div>
+            {% endif%}
             <div class="panel-body">
                 <ul class="list-unstyled">
-                {% for g_links in (SOCIAL, LINKS) %}
+                {% for g_links in (LINKS,) %}
                     {% for title, link in g_links %}
                         <li>{{ render_link_icon(link, title, FAVICON_LINKS) }}</li>
                     {% endfor %}
