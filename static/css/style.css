@@ -3,14 +3,14 @@ html {
 }
 body {
     background:#eee;
-    color:#222;
+    color:#666;
     font-family: Noto Serif, serif;
 }
 a {
-    color:#77a;
+    color:#703;
 }
 a:hover {
-    color:#557;
+    color:#e46;
 }
 iframe {
     border:0px;
@@ -20,20 +20,26 @@ iframe {
 }
 .btn-primary {
     background:transparent;
-    border-color:#77a;
-    color:#77a;
-}
-.continue-reading, .more-tags {
-    font-weight:bold;
+    border-color:#ddd;
+    color:#703;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus,
 .btn-primary:active, .btn-primary.active {
-    background:#557;
-    border-color:#557;
+    background:#e46;
+    border-color:#e46;
 }
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
-    background:#557;
-    border-color:#557;
+    color:#fff;
+    background:#703;
+    border-color:#703;
+}
+.pagination > li > a {
+    color:#703;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span, .pagination > li > span:focus, .pagination > li > span:hover {
+    color:#fff;
+    background:#e46;
+    border-color:#e46;
 }
 h1,h2,h3,h4,h5,h6, 
 .navbar, .footer {
@@ -54,12 +60,12 @@ h1,h2,h3,h4,h5,h6,
     vertical-align:-8px;
     display:inline-block;
 }
+.navbar-inverse .navbar-nav li a {
+    color:#999;
+}
 .navbar-inverse .navbar-nav li a:hover,
 .navbar-inverse a.navbar-brand:hover {
-    background-color: #557;
-}
-.sidebar .sidebar-widget .panel-heading {
-    font-weight:bold;
+    background-color: #e46;
 }
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
@@ -98,8 +104,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .main article {
     padding:10px 0;
-    margin-bottom:20px;
-    border-bottom:1px solid #eee;
+    margin-bottom:25px;
 }
 .main .figure,
 .main .acknowledgment {
@@ -148,25 +153,26 @@ h1,h2,h3,h4,h5,h6,
 .main .html5-embed-iframe{
     margin:10px auto;
 }
-.main .panel-heading h1,
-.main header h1 {
+.main h1, .main h2, .main h3,
+.main h4, .main h5, .main h6 {
+    color:#222;
     margin:0;
 }
 .main h2 {
     margin:5px 0;
 }
 .main .post-meta {
-    color: #999;
+    color: #666;
     margin: 5px 0 5px 0;
     line-height:25px;
 }
 .main .post-meta .label-default,
 .sidebar .hashtag-widget .label-default {
-    background-color: #77a;
+    background-color: #703;
 }
 .main .post-meta .label-default:hover,
 .sidebar .hashtag-widget .label-default:hover {
-    background-color: #557;
+    background-color: #e46;
 }
 .sidebar .hashtag-widget .more-tags {
     margin-top:10px;
@@ -180,8 +186,11 @@ h1,h2,h3,h4,h5,h6,
 .footer .license-info img {
     vertical-align:middle;
 }
+.footer a {
+    color:#e46;
+}
 .footer a:hover {
-    color:#77d;
+    color:#fff;
 }
 
 @media (max-width: 991px) {
@@ -204,7 +213,7 @@ nav #tipue_search_input {
     background: #fff !important;
     color:#222 !important;
     padding:6px 12px !important;
-    width:auto !important;
+    width:100% !important;
     border:1px solid #cccccc !important;
     border-bottom-left-radius:4px !important;
     border-top-left-radius:4px !important;
