@@ -20,21 +20,21 @@ iframe {
 }
 .btn-primary {
     background:transparent;
-    border-color:#ddd;
+    border-color:#703;
     color:#703;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus,
 .btn-primary:active, .btn-primary.active {
-    background:#e46;
-    border-color:#e46;
-}
-.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
-    color:#fff;
     background:#703;
     border-color:#703;
 }
 .pagination > li > a {
     color:#703;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    color:#fff;
+    background:#703;
+    border-color:#703;
 }
 .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span, .pagination > li > span:focus, .pagination > li > span:hover {
     color:#fff;
@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .navbar-inverse .navbar-nav li a:hover,
 .navbar-inverse a.navbar-brand:hover {
-    background-color: #e46;
+    background-color: #703;
 }
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
@@ -117,6 +117,7 @@ h1,h2,h3,h4,h5,h6,
 .main .figure .caption-prefix {
     font-variant: small-caps;
     font-weight: bold;
+    color: #222;
     margin-right: 5px;
 }
 .main .figure img {
@@ -166,13 +167,25 @@ h1,h2,h3,h4,h5,h6,
     margin: 5px 0 5px 0;
     line-height:25px;
 }
-.main .post-meta .label-default,
-.sidebar .hashtag-widget .label-default {
-    background-color: #703;
+.main .post-meta .label-calendar {
+    padding:0 4.2px 0 0;
 }
-.main .post-meta .label-default:hover,
+.main .label-default,
+.sidebar .hashtag-widget .label-default {
+    background-color: transparent;
+    color: #703;
+    font-weight:normal;
+    border:1px solid #703;
+}
+.main .label-default:hover,
 .sidebar .hashtag-widget .label-default:hover {
-    background-color: #e46;
+    background-color: #703;
+    color: #fff;
+    border:1px solid #703;
+}
+.main .tags-page .label-default {
+    font-size:1em;
+    line-height:2.5;
 }
 .sidebar .hashtag-widget .more-tags {
     margin-top:10px;

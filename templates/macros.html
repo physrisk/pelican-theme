@@ -1,5 +1,5 @@
 {% macro render_meta(article,tags,AUTHOR) %}
-    <span class="glyphicon glyphicon-calendar"></span> {{ article.locale_date }}
+    <span class="label-calendar"><span class="glyphicon glyphicon-calendar"></span> {{ article.locale_date }}</span>
     {{ render_authors(article,AUTHOR) }}
     {{ render_tags(article,tags) }}
 {% endmacro %}
@@ -141,7 +141,7 @@
             {% for tag in wtags[:WIDGET_MAX_TAGS] %}
                 {{ render_tag(tag) }}
             {% endfor %}
-             <div><a class="more-tags btn btn-primary" href="{{ SITEURL }}/tags.html">All hashtags...</a></div>
+             <div><a class="more-tags btn btn-primary" href="{{ SITEURL }}/tags.html">See all hashtags...</a></div>
         </div>
     </div>
 {% endmacro %}
