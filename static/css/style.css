@@ -67,6 +67,10 @@ h1,h2,h3,h4,h5,h6,
 .navbar-inverse a.navbar-brand:hover {
     background-color: #703;
 }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color:#fff;
+    background-color:#e46;
+}
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
 }
