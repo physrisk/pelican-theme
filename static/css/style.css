@@ -9,7 +9,7 @@ body {
 a {
     color:#703;
 }
-a:hover {
+a:hover, a:focus {
     color:#e46;
 }
 iframe {
@@ -215,7 +215,9 @@ h1,h2,h3,h4,h5,h6,
     border:1px solid #703;
 }
 .main .label-default:hover,
-.sidebar .hashtag-widget .label-default:hover {
+.main .label-default:focus,
+.sidebar .hashtag-widget .label-default:hover,
+.sidebar .hashtag-widget .label-default:focus {
     background-color: #703;
     color: #fff;
     border:1px solid #703;
@@ -239,7 +241,8 @@ h1,h2,h3,h4,h5,h6,
 .footer a {
     color:#e46;
 }
-.footer a:hover {
+.footer a:hover, 
+.footer a:focus {
     color:#fff;
 }
 
