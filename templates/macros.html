@@ -149,7 +149,7 @@
 
 {% macro render_info_widget(INFO_WIDGET={'logo': '', 'text': ''}) %}
     {% if INFO_WIDGET %}
-        <div class="sidebar-widget info-widget panel panel-default">
+        <div class="sidebar-widget info-widget panel panel-default hidden-sm hidden-xs">
             <div class="panel-body">
                 <div><img class="logo" src="{{ INFO_WIDGET['logo'] }}"/></div>
                 {{ INFO_WIDGET['text'] }}
