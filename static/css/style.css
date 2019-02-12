@@ -12,6 +12,9 @@ a {
 a:hover, a:focus {
     color:#e46;
 }
+blockquote {
+    font-size:0.8em;
+}
 iframe {
     border:0px;
     display:block;
