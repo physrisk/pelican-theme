@@ -1,5 +1,5 @@
 html {
-    background:#222;
+    background:#333;
 }
 body {
     background:#eee;
@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,h6,
     vertical-align:-1.5px;
 }
 .navbar-inverse {
-    background:#222;
+    background:#333;
     color:#999;
 }
 .navbar-inverse .navbar-brand {
@@ -106,9 +106,11 @@ h1,h2,h3,h4,h5,h6,
     border-color:#703;
 }
 .sidebar .sidebar-widget .panel-heading {
-    background-color:#703;
-    border:1px solid #703;
-    color:#fff;
+    background-color: #333;
+    border: 1px solid #333;
+    color: #999;
+    font-weight: bold;
+    font-family: Open Sans Condensed, sans-serif;
 }
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
@@ -160,7 +162,7 @@ h1,h2,h3,h4,h5,h6,
 .main .figure .caption-prefix {
     font-variant: small-caps;
     font-weight: bold;
-    color: #222;
+    color: #333;
     margin-right: 5px;
 }
 .main .figure img {
@@ -199,7 +201,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .main h1, .main h2, .main h3,
 .main h4, .main h5, .main h6 {
-    color:#222;
+    color:#333;
     margin:0;
 }
 .main h2 {
@@ -276,7 +278,7 @@ nav #tipue_search_input {
     line-height:20px !important;
     background-image:none !important;
     background: #fff !important;
-    color:#222 !important;
+    color:#333 !important;
     padding:6px 12px !important;
     width:100% !important;
     border:1px solid #cccccc !important;
