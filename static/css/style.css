@@ -187,8 +187,8 @@ h1,h2,h3,h4,h5,h6,
 .main ul.article-references {
 	list-style-type: decimal;
 }
-.main .html5-embed {
-    margin:10px 0;
+.main .html5-embed, .main .embed-responsive {
+    margin:10px 0 20px 0;
 }
 .main .html5-embed-image{
     text-align:center;
@@ -197,7 +197,7 @@ h1,h2,h3,h4,h5,h6,
     margin-bottom:10px;
 }
 .main .html5-embed-iframe{
-    margin:10px auto;
+    margin:10px auto 20px auto;
 }
 .main h1, .main h2, .main h3,
 .main h4, .main h5, .main h6 {
