@@ -1,3 +1,9 @@
+function doDuckSearch() {
+    let fieldObj = document.querySelector("#searchInput");
+    fieldObj.value = "site:rf.mokslasplius.lt "+fieldObj.value;
+    return true;
+}
+
 function onLoad() {
     fetch("/theme/img/main-bg.svg")
         .then((response)=> {

@@ -129,16 +129,14 @@
                     {# =menu #}
 
                     {# search #}
-                        {% if TIPUE_SEARCH %}
-                            <form class="navbar-form navbar-right" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input type="text" id="tipue_search_input" name="q" class="form-control search-query" placeholder="Search" required />
-                                        <span class="input-group-btn"><button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
-                                    </div>
+                        <form class="navbar-form navbar-right" role="search" action="https://duckduckgo.com/" onsubmit="doDuckSearch();">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" id="searchInput" name="q" class="form-control search-query" placeholder="Search using DuckDuckGo" required />
+                                    <span class="input-group-btn"><button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
                                 </div>
-                            </form>
-                        {% endif %}
+                            </div>
+                        </form>
                     {# =search #}
                 </div>
             </div>
