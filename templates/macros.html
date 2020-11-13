@@ -106,22 +106,22 @@
     </a>
 {%- endmacro %}
 
-{% macro render_link_widget(LINKS, IS_SITE_LINKS, FAVICON_LINKS) %}
+{% macro render_link_list(LINKS) %}
+    <ul class="list-unstyled">
+    {% for g_links in (LINKS,) %}
+        {% for title, link in g_links %}
+            <li>{{ render_link_icon(link, title, FAVICON_LINKS) }}</li>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro render_link_widget(LINKS, FAVICON_LINKS) %}
     {% if LINKS %}
         <div class="sidebar-widget links-widget panel panel-default">
-            {% if IS_SITE_LINKS %}
-            <div class="panel-heading">Physics of Risk Links</div>
-            {% else %}
-            <div class="panel-heading">External Links</div>
-            {% endif%}
+            <div class="panel-heading">Related</div>
             <div class="panel-body">
-                <ul class="list-unstyled">
-                {% for g_links in (LINKS,) %}
-                    {% for title, link in g_links %}
-                        <li>{{ render_link_icon(link, title, FAVICON_LINKS) }}</li>
-                    {% endfor %}
-                {% endfor %}
-                </ul>
+                {{ render_link_list(LINKS) }}
             </div>
         </div>
     {% endif %}
@@ -147,10 +147,13 @@
 
 {% macro render_info_widget(INFO_WIDGET={'logo': '', 'text': ''}) %}
     {% if INFO_WIDGET %}
-        <div class="sidebar-widget info-widget panel panel-default hidden-sm hidden-xs">
+        <div class="sidebar-widget info-widget panel panel-default">
             <div class="panel-body">
                 <div><img class="logo" src="{{ INFO_WIDGET['logo'] }}"/></div>
                 {{ INFO_WIDGET['text'] }}
+                {% if INFO_WIDGET['links'] %}
+                    {{ render_link_list(INFO_WIDGET['links']) }}
+                {% endif %} 
             </div>
         </div>
     {% endif %}

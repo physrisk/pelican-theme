@@ -1,5 +1,4 @@
 {% import 'macros.html' as m %}
 {{ m.render_info_widget(INFO_WIDGET) }}
-{{ m.render_link_widget(INTERNAL,True,FAVICON_LINKS) }}
-{{ m.render_link_widget(LINKS,False,FAVICON_LINKS) }}
+{{ m.render_link_widget(LINKS,FAVICON_LINKS) }}
 {{ m.render_hashtag_widget(tags,SITE_URL,WIDGET_MAX_TAGS) }}
