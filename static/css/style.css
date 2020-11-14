@@ -105,13 +105,6 @@ h1,h2,h3,h4,h5,h6,
 .navbar-inverse .navbar-form {
     border-color:#703;
 }
-.sidebar .sidebar-widget .panel-heading {
-    background-color: #333;
-    border: 1px solid #333;
-    color: #999;
-    font-weight: bold;
-    font-family: Open Sans Condensed, sans-serif;
-}
 .sidebar .sidebar-widget .panel-body {
     text-align:left;
 }
