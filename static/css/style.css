@@ -59,7 +59,7 @@ iframe {
 }
 h1,h2,h3,h4,h5,h6, 
 .navbar, .footer {
-    font-family: Open Sans Condensed, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans Condensed, Nimbus Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 .navbar .glyphicon-menu-hamburger {
     vertical-align:-1.5px;
