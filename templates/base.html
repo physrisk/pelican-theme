@@ -182,10 +182,10 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script src="{{ SITEURL }}/theme/js/application.js"></script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML'></script>
-            <script type="text/x-mathjax-config">
-			    MathJax.Hub.Config({TeX:{equationNumbers:{autoNumber:"AMS"}}});
+            <script>
+                window.MathJax={tex:{tags:'ams'}}
             </script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
             {% block extra_js %}{% endblock %}
         {# =javascript #}
 
