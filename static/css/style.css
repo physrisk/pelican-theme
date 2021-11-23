@@ -119,9 +119,6 @@ h1,h2,h3,h4,h5,h6,
 .sidebar .hashtag-widget .panel-body {
     line-height:25px;
 }
-.main {
-    z-index:999;
-}
 .main header {
     margin-bottom:10px;
 }
