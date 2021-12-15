@@ -84,13 +84,13 @@ h1,h2,h3,h4,h5,h6,
 .navbar-inverse .navbar-nav li a:hover,
 .navbar-inverse a.navbar-brand:focus,
 .navbar-inverse a.navbar-brand:hover {
-    background:#703;
+    background:#e46;
 }
 .navbar-inverse .navbar-nav > .active > a, 
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
     color:#fff;
-    background-color:#e46;
+    background-color:#703;
 }
 .navbar-inverse .navbar-toggle {
     border:1px solid #fff;
