@@ -7,7 +7,7 @@ function doDuckSearch() {
 
 function onLoad() {
     fetch("/theme/img/main-bg.svg")
-        .then(()=> {
+        .then(() => {
                 let bodyObj;
                 bodyObj=document.querySelector("body");
                 bodyObj.style.backgroundImage="url(\"/theme/img/main-bg.svg\")";
@@ -21,3 +21,5 @@ function onLoad() {
 }
 
 document.addEventListener("DOMContentLoaded", () => onLoad(), false);
+
+window.MathJax={tex:{tags:'ams'}};
