@@ -11,11 +11,11 @@
     {# =essentials #}
 
     {# bootstrap #}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     {# =bootstrap #}
 
     {# css #}
-        <link rel="stylesheet" href="/theme/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css">
         {% block extra_css %}{% endblock extra_css %}
     {# =css #}
 
@@ -31,7 +31,7 @@
     {# =favicon #}
 
     {# fonts #}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:b|Noto+Serif">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:b|Noto+Serif" crossorigin="anonymous">
     {# =fonts #}
 
     {# feeds #}
@@ -179,10 +179,10 @@
         </footer>
 
         {# javascript #}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <script src="{{ SITEURL }}/theme/js/application.js"></script>
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="{{ SITEURL }}/theme/js/application.js"></script>
+            <script id="MathJax-script" type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" integrity="sha384-+BSz3oj3ILMYvOBr16U9i0H4RZRmGyQQ+1q9eqr8T3skmAFrJk8GmgwgqlCZdNSo" crossorigin="anonymous"></script>
             {% block extra_js %}{% endblock %}
         {# =javascript #}
 
