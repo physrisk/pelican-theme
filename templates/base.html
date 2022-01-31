@@ -76,10 +76,10 @@
         <meta property="og:site_name" content="{{ SITENAME }}" />
         <meta property="og:type" content="article" />
         {% if article and article.title %}    
-            <meta property="og:title" content="{{ article.title|striptags|e }} -- {{ SITENAME }}" />
+            <meta property="og:title" content="{{ article.title|striptags|e }} - {{ SITENAME }}" />
             <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
         {% elif page and page.title %}    
-            <meta property="og:title" content="{{ page.title|striptags|e }} -- {{ SITENAME }}" />
+            <meta property="og:title" content="{{ page.title|striptags|e }} - {{ SITENAME }}" />
             <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
         {% endif%}
         {% if article and article.image_url %}
