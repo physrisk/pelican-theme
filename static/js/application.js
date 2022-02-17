@@ -15,9 +15,6 @@ function onLoad() {
                 bodyObj.style.backgroundPosition="center top";
                 bodyObj.style.backgroundSize="100% auto";
             });
-    fetch("/sidebar-widgets.html")
-        .then((response) => response.text())
-        .then((str) => document.querySelector("#js-load-sidebar").innerHTML=str);
 }
 
 document.addEventListener("DOMContentLoaded", () => onLoad(), false);
