@@ -1,7 +1,7 @@
-function doDuckSearch() {
+function doSearch() {
     let fieldObj;
     fieldObj=document.querySelector("#searchInput");
-    fieldObj.value="site:rf.mokslasplius.lt "+fieldObj.value;
+    fieldObj.value=fieldObj.value+" site:rf.mokslasplius.lt ";
     return true;
 }
 
