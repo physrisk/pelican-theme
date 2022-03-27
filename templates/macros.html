@@ -42,7 +42,7 @@
 {% endmacro %}
 
 {% macro render_tag(tag) -%}
-    <a href="{{ SITEURL }}/{{ tag.url }}" data-toggle="tooltip" class="label label-default" title="{{ tag.articles }} article{{ 's' if tag.articles > 1 else '' }} with this hashtag">#{{ tag.name }}</a>
+    <a href="{{ SITEURL }}/{{ tag.url }}" data-toggle="tooltip" class="label label-default" title="#{{ tag.name }} has {{ tag.articles }} article{{ 's' if tag.articles > 1 else '' }}">#{{ tag.name }}</a>
 {%- endmacro %}
 
 {% macro license(SITENAME, SITEURL, LICENSE={'cc_name':'by-nc', 'copyright': '', 'disclaimer': '', from: False, to: False}) %}
