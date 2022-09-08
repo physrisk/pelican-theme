@@ -9,22 +9,24 @@
 {% endblock %}
 
 {% block body_content %}
-    <header>
-        <h1>{{ article.title }}</h1>
-        <div class="post-meta">
-            {{ m.render_meta(article,tags,AUTHOR) }}
-        </div>
-    </header>
-    {{ article.content }}
+    <article>
+        <header>
+            <h1>{{ article.title }}</h1>
+            <div class="post-meta">
+                {{ m.render_meta(article,tags,AUTHOR) }}
+            </div>
+        </header>
+        {{ article.content }}
 
-    {% if article.related_posts %}
-        <aside>
-            <h2>Related content</h2>
-            <ul>
-            {% for related_post in article.related_posts %}
-                <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
-            {% endfor %}
-            </ul>
-        </aside>
-    {% endif %}
+        {% if article.related_posts %}
+            <aside>
+                <h2>Related content</h2>
+                <ul>
+                {% for related_post in article.related_posts %}
+                    <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </aside>
+        {% endif %}
+    </article>
 {% endblock %}
