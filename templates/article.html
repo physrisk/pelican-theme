@@ -4,6 +4,8 @@
     {{ article.title|striptags|e }}
 {% endblock %}
 
+{% block main_class %}article{% endblock main_class %}
+
 {% set skip_title = true %}
 {% block body_title %}
 {% endblock %}
