@@ -164,9 +164,10 @@ h1,h2,h3,h4,h5,h6,
 .main table th {
     padding: 0 5px 0 0;
 }
-.main article {
-    padding: 10px 0;
-    margin-bottom: 25px;
+.main.index article {
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    border-bottom: 4px solid #eee;
 }
 .main .figure,
 .main .acknowledgment {
