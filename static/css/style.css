@@ -16,7 +16,7 @@ body {
     font-size: 15px;
     background: var(--bg-main);
     color: var(--fg-dark);
-    font-family: Noto Serif, Georgia, Liberation Serif, serif;
+    font-family: 'Noto Serif', Georgia, 'Liberation Serif', serif;
 }
 a {
     color: var(--accent-color-dark);
@@ -71,7 +71,7 @@ iframe {
 }
 h1,h2,h3,h4,h5,h6, 
 .navbar, .footer {
-    font-family: Open Sans Condensed, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .navbar .glyphicon-menu-hamburger {
     vertical-align:-1.5px;
