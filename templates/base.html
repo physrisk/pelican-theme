@@ -3,15 +3,15 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
     {# essentials #}
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block head_title %}Home{% endblock head_title %} &ndash; {{ SITENAME }}</title>
-        <meta name="author" content="{{ AUTHOR|e }}"/>
+        <meta name="author" content="{{ AUTHOR|e }}">
     {# =essentials #}
 
     {# bootstrap #}
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {# =bootstrap #}
 
     {# css #}
@@ -61,40 +61,40 @@
             {% if all_feeds.append({'kind': 'RSS', 'url': TAG_FEED_RSS|format(tag.slug), 'name': 'Tag: ' + tag.name}) %}{% endif %}
         {% endif %}
         {% for feed in all_feeds %}
-            <link href="{{ FEED_DOMAIN }}/{{ feed.url }}" type="application/{{ feed.kind|lower }}+xml" rel="alternate" title="{{ SITENAME|e }} - {{ feed.name|e }} - {{ feed.kind }} Feed"/>
+            <link href="{{ FEED_DOMAIN }}/{{ feed.url }}" type="application/{{ feed.kind|lower }}+xml" rel="alternate" title="{{ SITENAME|e }} - {{ feed.name|e }} - {{ feed.kind }} Feed">
         {% endfor %}
     {# =feeds #}
 
     {# seo #}
         {% if article and article.summary %}
-            <meta name="description" content="{{ article.summary|striptags|e }}"/>
+            <meta name="description" content="{{ article.summary|striptags|e }}">
         {% elif page and page.summary %}
-            <meta name="description" content="{{ page.summary|striptags|e }}"/>
+            <meta name="description" content="{{ page.summary|striptags|e }}">
         {% else %}
-            <meta name="description" content="{{ SITE_SUMMARY }}"/>
+            <meta name="description" content="{{ SITE_SUMMARY }}">
         {% endif%}
-        <meta property="og:site_name" content="{{ SITENAME }}" />
-        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="{{ SITENAME }}" >
+        <meta property="og:type" content="article">
         {% if article and article.title %}    
-            <meta property="og:title" content="{{ article.title|striptags|e }} - {{ SITENAME }}" />
-            <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+            <meta property="og:title" content="{{ article.title|striptags|e }} - {{ SITENAME }}">
+            <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
         {% elif page and page.title %}    
-            <meta property="og:title" content="{{ page.title|striptags|e }} - {{ SITENAME }}" />
-            <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+            <meta property="og:title" content="{{ page.title|striptags|e }} - {{ SITENAME }}">
+            <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
         {% endif%}
         {% if article and article.image_url %}
-            <meta property="og:image" content="{{ SITEURL }}/{{ article.image_url}}" />
+            <meta property="og:image" content="{{ SITEURL }}/{{ article.image_url}}">
         {% elif page and page.image_url %}
-            <meta property="og:image" content="{{ SITEURL }}/{{ page.image_url}}" />
+            <meta property="og:image" content="{{ SITEURL }}/{{ page.image_url}}">
         {% else %}
-            <meta property="og:image" content="{{ SITE_LOGO_URL }}" />
+            <meta property="og:image" content="{{ SITE_LOGO_URL }}">
         {% endif%}
         {% if article and article.summary %}
-            <meta property="og:description" content="{{ article.summary|striptags|e }}" />
+            <meta property="og:description" content="{{ article.summary|striptags|e }}">
         {% elif page and page.summary %}
-            <meta property="og:description" content="{{ page.summary|striptags|e }}" />
+            <meta property="og:description" content="{{ page.summary|striptags|e }}">
         {% else %}
-            <meta name="og:description" content="{{ SITE_SUMMARY|striptags|e }}"/>
+            <meta name="og:description" content="{{ SITE_SUMMARY|striptags|e }}">
         {% endif%}
     {# =seo #}
 
@@ -110,7 +110,7 @@
                             <span class="sr-only">Toggle navigation</span>
                             <span class="glyphicon glyphicon-menu-hamburger"></span>
                         </button>
-                        <a class="navbar-brand" href="{{ SITEURL }}"><img src="{{ SITE_LOGO_URL }}" alt="{{ SITENAME }}"/> {{ SITENAME }}</a>
+                        <a class="navbar-brand" href="{{ SITEURL }}"><img src="{{ SITE_LOGO_URL }}" alt="{{ SITENAME }}"> {{ SITENAME }}</a>
                     </div>
                 {# =hamburger #}
 
@@ -132,7 +132,7 @@
                         <form class="navbar-form navbar-right" role="search" action="https://google.com/search" onsubmit="doSearch();">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <input type="text" id="searchInput" name="q" class="form-control search-query" placeholder="Search using Google" required />
+                                    <input type="text" id="searchInput" name="q" class="form-control search-query" placeholder="Search using Google" required>
                                     <span class="input-group-btn"><button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
                                 </div>
                             </div>
