@@ -146,7 +146,7 @@
     {% if INFO_WIDGET %}
         <div class="sidebar-widget info-widget panel panel-default">
             <div class="panel-body">
-                <div><img class="logo" src="{{ INFO_WIDGET['logo'] }}"></div>
+                <div><img class="logo" alt="website logo" src="{{ INFO_WIDGET['logo'] }}"></div>
                 {{ INFO_WIDGET['text'] }}
                 {% if INFO_WIDGET['links'] %}
                     {{ render_link_list(INFO_WIDGET['links']) }}
