@@ -1,6 +1,6 @@
 :root {
-    --accent-color-dark: #703;
-    --accent-color-light: #e46;
+    --accent-color-dark: #05b;
+    --accent-color-light: #39f;
     --bg-dark: #333;
     --fg-dark: #ccc;
     --bg-main: #eee;
@@ -41,6 +41,12 @@ iframe {
 .embed-responsive iframe {
     margin: 0;
 }
+.panel-default,
+.panel-default .panel-heading {
+    border-color: var(--bg-main);
+    background: var(--bg-light);
+    color: var(--fg-light);
+}
 .btn-primary {
     background: var(--bg-main);
     color: var(--fg-main);
@@ -54,8 +60,11 @@ iframe {
     border: 0;
     font-size: 1em;
 }
-.pagination > li > a {
+.pagination > li > a,
+.pagination > .disabled > a,
+.pagination > .disabled > a.hover {
     color: var(--accent-color-dark);
+    background: var(--bg-light);
 }
 .pagination > .active > a,
 .pagination > .active > a:focus,
@@ -63,7 +72,7 @@ iframe {
 .pagination > .active > span,
 .pagination > .active > span:focus,
 .pagination > .active > span:hover {
-    color: var(--bg-light);
+    color: var(--accent-color-light);
     background: var(--accent-color-dark);
     border-color: var(--accent-color-dark);
 }
@@ -72,10 +81,11 @@ iframe {
 .pagination > li > span,
 .pagination > li > span:focus,
 .pagination > li > span:hover {
+    color: var(--accent-color-dark);
     background: var(--accent-color-light);
     border-color: var(--accent-color-light);
 }
-h1,h2,h3,h4,h5,h6, 
+h1,h2,h3,h4,h5,h6,
 .navbar, .footer {
     font-family: var(--header-font-stack);
     font-weight: 700;
@@ -103,10 +113,10 @@ h1,h2,h3,h4,h5,h6,
 .navbar-inverse .navbar-nav li a:hover,
 .navbar-inverse a.navbar-brand:focus,
 .navbar-inverse a.navbar-brand:hover {
-    color: var(--fg-light);
+    color: var(--accent-color-dark);
     background: var(--accent-color-light);
 }
-.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
     color: var(--fg-dark);
@@ -124,6 +134,11 @@ h1,h2,h3,h4,h5,h6,
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
     border-color: var(--accent-color-dark);
+}
+.navbar-inverse .navbar-form .btn-default {
+    background: var(--bg-main);
+    border-color: var(--bg-main);
+    color: var(--fg-light);
 }
 .sidebar .sidebar-widget .panel-body {
     text-align: left;
@@ -150,9 +165,6 @@ h1,h2,h3,h4,h5,h6,
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.main, .sidebar {
-    color: var(--fg-light);
-}
 .main header {
     margin-bottom: 10px;
 }
@@ -174,7 +186,7 @@ h1,h2,h3,h4,h5,h6,
 .main.index article {
     padding-bottom: 5%;
     margin-bottom: 5%;
-    border-bottom: 4px solid #eee;
+    border-bottom: 4px solid var(--bg-main);
 }
 .main .figure,
 .main .acknowledgment {
