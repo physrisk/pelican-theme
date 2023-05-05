@@ -39,6 +39,10 @@ a:hover, a:focus {
     color: var(--accent-color-dark);
     text-decoration: underline;
 }
+abbr, abbr[title] {
+    text-decoration: none;
+    border-bottom: 1px dashed var(--fg-light);
+}
 blockquote {
     font-size: 0.8em;
 }
