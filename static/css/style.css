@@ -11,6 +11,16 @@
     --header-font-stack: 'Open Sans Condensed', sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-color-dark: #39f;
+        --accent-color-light: #05b;
+        --bg-main: #555;
+        --bg-light: #444;
+        --fg-light: #eee;
+    }
+}
+
 html {
     background: var(--bg-dark);
     font-size: 15px;
