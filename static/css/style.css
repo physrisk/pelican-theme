@@ -1,6 +1,6 @@
 :root {
     --accent-color-dark: #05b;
-    --accent-color-light: #39f;
+    --accent-color-light: #6bf;
     --bg-dark: #333;
     --fg-dark: #ccc;
     --bg-main: #eee;
@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent-color-dark: #39f;
+        --accent-color-dark: #6bf;
         --accent-color-light: #05b;
         --bg-main: #555;
         --bg-light: #444;
