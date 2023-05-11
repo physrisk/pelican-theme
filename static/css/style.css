@@ -134,7 +134,7 @@ h1,h2,h3,h4,h5,h6,
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
     color: var(--fg-dark);
-    background-color: var(--accent-color-dark);
+    background: var(--accent-color-dark);
 }
 .navbar-inverse .navbar-toggle {
     border: 1px solid var(--accent-color-dark);
@@ -143,7 +143,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-    background-color: var(--accent-color-dark);
+    background: var(--accent-color-dark);
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
@@ -271,14 +271,14 @@ h1,h2,h3,h4,h5,h6,
 .sidebar .hashtag-widget .label-default {
     font-weight: normal;
     color: var(--fg-main);
-    background-color: var(--bg-main);
+    background: var(--bg-main);
 }
 .main .label-default:hover,
 .main .label-default:focus,
 .sidebar .hashtag-widget .label-default:hover,
 .sidebar .hashtag-widget .label-default:focus {
     color: var(--bg-light);
-    background-color: var(--accent-color-dark);
+    background: var(--accent-color-dark);
 }
 .main .tags-page .label-default {
     font-size: 1em;
@@ -360,11 +360,11 @@ nav #searchInput {
 
 /* Pygments styling for code blocks */
 .highlight pre { line-height: 125%; background: #f8f8f8 }
-.highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px }
-.highlight span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px }
-.highlight td.linenos .special { color: #000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px }
-.highlight span.linenos.special { color: #000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px }
-.highlight .hll { background-color: #ffc }
+.highlight td.linenos .normal { color: inherit; background: transparent; padding-left: 5px; padding-right: 5px }
+.highlight span.linenos { color: inherit; background: transparent; padding-left: 5px; padding-right: 5px }
+.highlight td.linenos .special { color: #000; background: #ffffc0; padding-left: 5px; padding-right: 5px }
+.highlight span.linenos.special { color: #000; background: #ffffc0; padding-left: 5px; padding-right: 5px }
+.highlight .hll { background: #ffc }
 .highlight .n, .highlight .h, { color: #333 } /* Name */
 .highlight .p { color: #080 } /* Punctuation */
 .highlight .c { color: #488; font-style: italic } /* Comment */
