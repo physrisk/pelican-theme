@@ -359,13 +359,15 @@ nav #searchInput {
 }
 
 /* Pygments styling for code blocks */
-.highlight pre { line-height: 125%; background: #f8f8f8 }
+.highlight pre { line-height: 125%; background: #fff; color: #333 }
 .highlight td.linenos .normal { color: inherit; background: transparent; padding-left: 5px; padding-right: 5px }
 .highlight span.linenos { color: inherit; background: transparent; padding-left: 5px; padding-right: 5px }
-.highlight td.linenos .special { color: #000; background: #ffffc0; padding-left: 5px; padding-right: 5px }
-.highlight span.linenos.special { color: #000; background: #ffffc0; padding-left: 5px; padding-right: 5px }
+.highlight td.linenos .special { color: #000; background: #ffc; padding-left: 5px; padding-right: 5px }
+.highlight span.linenos.special { color: #000; background: #ffc; padding-left: 5px; padding-right: 5px }
 .highlight .hll { background: #ffc }
-.highlight .n, .highlight .h, { color: #333 } /* Name */
+.highlight .n, .highlight .h { color: #333 } /* Name */
+.highlight .g { color: #333 } /* Generic */
+.highlight .o { color: #333 } /* Other */
 .highlight .p { color: #080 } /* Punctuation */
 .highlight .c { color: #488; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #f00 } /* Error */
@@ -425,11 +427,11 @@ nav #searchInput {
 .highlight .dl { color: #b22 } /* Literal.String.Delimiter */
 .highlight .sd { color: #b22; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #b22 } /* Literal.String.Double */
-.highlight .se { color: #b62; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #b22; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #b22 } /* Literal.String.Heredoc */
-.highlight .si { color: #b68; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #b22; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #080 } /* Literal.String.Other */
-.highlight .sr { color: #b68 } /* Literal.String.Regex */
+.highlight .sr { color: #b22 } /* Literal.String.Regex */
 .highlight .s1 { color: #b22 } /* Literal.String.Single */
 .highlight .ss { color: #117 } /* Literal.String.Symbol */
 .highlight .bp { color: #080 } /* Name.Builtin.Pseudo */
@@ -438,3 +440,4 @@ nav #searchInput {
 .highlight .vg { color: #117 } /* Name.Variable.Global */
 .highlight .vi { color: #117 } /* Name.Variable.Instance */
 .highlight .vm { color: #117 } /* Name.Variable.Magic */
+
