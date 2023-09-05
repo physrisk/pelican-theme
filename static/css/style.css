@@ -8,7 +8,7 @@
     --fg-light: #444;
     --ack-border: #ddd;
     --main-font-stack: 'Open Sans', sans-serif;
-    --header-font-stack: 'Open Sans Condensed', sans-serif;
+    --header-font-stack: 'Roboto Condensed', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
