@@ -522,3 +522,21 @@ nav #searchInput {
     .highlight .vi { color: #4ff } /* Name.Variable.Instance */
     .highlight .il { color: #37a } /* Literal.Number.Integer.Long */
 }
+
+@media print {
+    .sidebar {
+        display: none;
+    }
+    .continue-reading {
+        border: 1px solid black;
+    }
+    .main .panel {
+        border: 0 !important;
+    }
+    .main .panel .panel-body {
+        padding: 0 !important;
+    }
+    a[href]:after, img[src]:after {
+        content: none !important;
+    }
+}
