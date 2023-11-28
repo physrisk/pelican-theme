@@ -44,7 +44,10 @@ abbr, abbr[title] {
     border-bottom: 1px dashed var(--fg-light);
 }
 blockquote {
-    font-size: 0.8em;
+    font-size: 1.2em;
+    background: var(--bg-main);
+    border-left: 5px solid var(--accent-color-dark);
+    border-radius: 0 15px 15px 0;
 }
 iframe {
     border: 0px;
