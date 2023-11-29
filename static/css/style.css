@@ -302,6 +302,11 @@ h1,h2,h3,h4,h5,h6,
 .footer a {
     color: var(--accent-color-light);
 }
+@media (prefers-color-scheme: dark) {
+    .footer a {
+        color: var(--accent-color-dark);
+    }
+}
 .footer a:hover,
 .footer a:focus {
     text-decoration: underline;
