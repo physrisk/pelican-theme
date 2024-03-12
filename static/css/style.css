@@ -55,7 +55,7 @@ iframe {
     margin: 10px auto;
     overflow: hidden;
 }
-.embed-responsive iframe {
+.main .embed-responsive iframe {
     margin: 0;
 }
 .panel-default,
