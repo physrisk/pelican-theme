@@ -14,7 +14,8 @@ function getBackground() {
         backgroundImage = "/theme/img/main-bg-dark.svg";
     }
     fetch(backgroundImage).then(() => {
-        let bodyObj = document.querySelector("body");
+        let bodyObj;
+        bodyObj = document.querySelector("body");
         bodyObj.style.backgroundImage = `url("${backgroundImage}")`;
         bodyObj.style.backgroundRepeat = "repeat-y";
         bodyObj.style.backgroundPosition = "center top";
@@ -27,4 +28,6 @@ window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", () => getBackground());
 
-window.MathJax = { tex: { tags: "ams" } };
+window.MathJax = {
+    tex: { tags: "ams" },
+};
