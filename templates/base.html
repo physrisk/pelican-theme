@@ -70,11 +70,11 @@
 
     {# seo #}
         {% if article and article.summary %}
-            <meta name="description" content="{{ article.summary|striptags|e }}">
+            <meta name="description" content="{{ article.summary|striptags|truncate(250)|e }}">
         {% elif page and page.summary %}
-            <meta name="description" content="{{ page.summary|striptags|e }}">
+            <meta name="description" content="{{ page.summary|striptags|truncate(250)|e }}">
         {% else %}
-            <meta name="description" content="{{ SITE_SUMMARY }}">
+            <meta name="description" content="{{ SITE_SUMMARY|striptags|e }}">
         {% endif%}
         <meta property="og:site_name" content="{{ SITENAME }}" >
         <meta property="og:type" content="article">
@@ -93,9 +93,9 @@
             <meta property="og:image" content="{{ SITE_LOGO_URL }}">
         {% endif%}
         {% if article and article.summary %}
-            <meta property="og:description" content="{{ article.summary|striptags|e }}">
+            <meta property="og:description" content="{{ article.summary|striptags|truncate(250)|e }}">
         {% elif page and page.summary %}
-            <meta property="og:description" content="{{ page.summary|striptags|e }}">
+            <meta property="og:description" content="{{ page.summary|striptags|truncate(250)|e }}">
         {% else %}
             <meta name="og:description" content="{{ SITE_SUMMARY|striptags|e }}">
         {% endif%}
