@@ -48,7 +48,7 @@
 {% macro license(SITENAME, SITEURL, LICENSE={'cc_name':'by-nc', 'copyright': '', 'disclaimer': '', from: False, to: False}) %}
     {% set cc_name = LICENSE['cc_name']|lower|trim|replace("cc-","") %}
     {% set license = [
-            '<a class="license" rel="license" href="http://creativecommons.org/licenses/CC_NAME/4.0/" title="Creative Commons License">',
+            '<a class="license" rel="license" href="https://creativecommons.org/licenses/CC_NAME/4.0/" title="Creative Commons License">',
             '<img alt="Creative Commons License" src="/theme/img/license-80x15.png">',
             '</a>',
         ]|join("")
