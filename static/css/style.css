@@ -6,7 +6,6 @@
     --bg-main: #eee;
     --bg-light: #fff;
     --fg-light: #444;
-    --ack-border: #ddd;
     --main-font-stack: 'Open Sans', sans-serif;
     --header-font-stack: 'Roboto Condensed', sans-serif;
 }
@@ -228,8 +227,8 @@ h1,h2,h3,h4,h5,h6,
 .main .note,
 .main .acknowledgment {
     border: 0;
-    border-top: 1px solid var(--ack-border);
-    border-bottom: 1px solid var(--ack-border);
+    border-top: 1px solid var(--accent-color-dark);
+    border-bottom: 1px solid var(--accent-color-dark);
     background: var(--bg-main);
 }
 .main .note p,
