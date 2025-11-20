@@ -230,10 +230,16 @@ h1,h2,h3,h4,h5,h6,
     border-top: 1px solid var(--accent-color-dark);
     border-bottom: 1px solid var(--accent-color-dark);
     background: var(--bg-main);
+    display: flow-root;
 }
 .main .note p,
 .main .acknowledgment p {
     margin: 0;
+}
+.main .note .figure,
+.main .acknowledgment .figure {
+    margin: 4px 0 0 10px;
+    padding: 0;
 }
 .main .float-right {
     float: right;
