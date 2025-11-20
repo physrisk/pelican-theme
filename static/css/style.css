@@ -250,16 +250,13 @@ h1,h2,h3,h4,h5,h6,
 	list-style-type: decimal;
 }
 .main .html5-embed, .main .embed-responsive {
-    margin: 10px 0 20px 0;
+    margin: 10px auto 20px auto;
 }
-.main .html5-embed-image{
+.main .html5-embed .html5-embed-image {
     text-align: center;
 }
-.main .html5-embed .html5-embed-image{
-    margin-bottom: 10px;
-}
-.main .html5-embed-iframe{
-    margin: 10px auto 20px auto;
+.main .html5-embed .html5-embed-image img {
+    max-width: 500px;
 }
 .main h1 {
     color: var(--accent-color-dark);
