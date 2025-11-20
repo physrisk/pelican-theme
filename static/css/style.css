@@ -205,8 +205,7 @@ h1,h2,h3,h4,h5,h6,
     border-bottom: 4px solid var(--bg-main);
 }
 .main .figure,
-.main .note,
-.main .acknowledgment {
+.main .side-note {
     margin: 10px 0;
     padding: 10px 20px;
 }
@@ -224,20 +223,17 @@ h1,h2,h3,h4,h5,h6,
     display: block;
     margin: 0 auto;
 }
-.main .note,
-.main .acknowledgment {
+.main .side-note {
     border: 0;
     border-top: 1px solid var(--accent-color-dark);
     border-bottom: 1px solid var(--accent-color-dark);
     background: var(--bg-main);
     display: flow-root;
 }
-.main .note p,
-.main .acknowledgment p {
+.main .side-note p {
     margin: 0;
 }
-.main .note .figure,
-.main .acknowledgment .figure {
+.main .side-note .figure {
     margin: 4px 0 0 10px;
     padding: 0;
 }
