@@ -43,7 +43,7 @@ abbr, abbr[title] {
     border-bottom: 1px dashed var(--fg-light);
 }
 hr {
-    border-top: 1px soild var(--bg-main);
+    border-top: 2px solid var(--bg-main);
 }
 blockquote {
     font-size: 1em;
